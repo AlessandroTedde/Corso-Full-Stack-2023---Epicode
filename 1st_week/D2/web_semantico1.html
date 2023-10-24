@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web semantico</title>
+</head>
+<body>
+<div id="contenitore">
+    <header><!-- intestazione -->
+        <img src="img/logo.png" alt="Epicode logo">
+        <form action="#" method="#">
+            <input type="search" name="search" id="search" placeholder="Search">
+        </form>
+    </header>
+    <nav><!-- menu di navigazione -->
+        <ul>
+            <li><a href="#">Home page</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">I nostri corsi</a>
+                <ul>
+                    <li><a href="#">base</a></li>
+                    <li><a href="#">avanzato</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Lavora con noi</a></li>
+            <li><a href="#">Iscriviti</a></li>
+        </ul>
+    </nav>
+    <main><!-- contenuto principale -->
+        <article> <!-- articolo / qualcosa che ha senso e significato da solo -->
+            <h2>Titolo del mio articolo</h2>
+            <h3>Sottotitolo del mio articolo</h3>
+            <!-- carico contenuto finto https://cupcakeipsum.com/ -->
+            <p>Gummi bears chocolate cake caramels dragée lemon drops cookie jelly-o brownie candy canes. Danish topping gummies dragée toffee powder sweet danish. Apple pie croissant pastry caramels marzipan. Cupcake liquorice bear claw tootsie roll bonbon chocolate bar. Ice cream jelly beans cake jujubes carrot cake icing apple pie bonbon oat cake. Chupa chups cake jelly sugar plum topping halvah biscuit. Jelly-o donut candy canes jujubes candy fruitcake candy canes jelly beans candy canes. Soufflé pastry powder cotton candy dragée cupcake. Chupa chups chocolate cake sugar plum bear claw ice cream cake cotton candy. Cotton candy bear claw wafer lemon drops pie shortbread gummi bears apple pie candy canes.</p>
+            <p>Gummies croissant topping shortbread marzipan gummi bears cake. Jelly-o macaroon jelly beans danish biscuit bonbon chupa chups pie. Tiramisu sweet bear claw cupcake candy canes donut donut. Carrot cake pudding pastry bear claw chupa chups toffee. Marshmallow cotton candy cake fruitcake tiramisu lemon drops candy. Donut candy ice cream pie lemon drops. Gummi bears liquorice chupa chups danish marzipan bonbon candy muffin.</p>
+        </article>
+        <section> <!-- una sezione separata -->
+            <form method="#" action="#">
+                <label for="for commento">Lascia il tuo commento</label><br>
+                <textarea name="commento" placeholder="Commento"></textarea><br>
+                <input type="submit">
+            </form>
+        </section>
+        <!--
+            main può contenere più article e più section
+            section può contenere più article ma anche vicebersa
+            article contenga header main footer (più rara)
+            article e section non sono in rapporto parent/child
+        -->
+    </main>
+    <aside><!-- contenuto secondario -->
+        <ul>
+            <li><a href="#" title="corso_1"><img src="../1_giorno/img/mia_prima_immagine.webp" alt="#"></a></li>
+            <li><a href="#" title="corso_2"><img src="../1_giorno/img/mia_prima_immagine.webp"></a></li>
+            <li><a href="#" title="corso_3"><img src="../1_giorno/img/mia_prima_immagine.webp"></a></li>
+        </ul>
+    </aside>
+    <footer><!-- piè di pagina-->
+        <p>Tutti i diritti riservati &copy;</p>
+    </footer>
+</div>    
+</body>
+</html>

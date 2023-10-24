@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+</head>
+<body>
+    <audio>
+        <source src="/audio/13 light velocity.mp3" type="audio/mp3"><!--uso questo metodo solo se devo mettere più formati di questo file in caso le avessi-->
+    </audio>
+    <!--altrimenti scrivo direttamente dentro il tag audio la source-->
+    <audio src="/audio/13 light velocity.mp3" controls></audio><!--con controls implementiamo i controlli per stop, play ecc.-->
+    <!--altri attributi: autoplay (fa partire audio in automatico ma è desueto), poi controls per i controlli, loop per loopare, muted per mutare l'audio e src che è attributo fondamentale per specificare il file da caricare-->
+    <video src="/audio/Pepo Horatio.mp4" controls loop poster="/1st_week/D1/tessera.JPG" width="150"></video>
+    <picture>
+        <source media="(min-width:1024px)" srcset="immagine_grande.jpg">
+        <source media="(min-width:768px)" srcset="immagine_media.jpg">
+        <img src="immagine_piccola.jpg" alt="Logo">
+    </picture>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEomGGM9VPM?si=XEoAndp5mGoIFsjF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!--questa linea è stata fatta mettendo condividi e poi incorpora da un video di youtube, si può fare anche con Maps-->
+</body>
+</html>

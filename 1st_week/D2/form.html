@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="get" action="#"><!--tag parent di tutti i form, method indica il metodo con cui poi verranno passati i dati-->
+                        <!--action indica cosa fa il form (ad esempio pagina di destinazione)-->
+    <fieldset><!--tag che serve a raccogliere un set di campi-->
+    <legend><!--serve a descrivere, etichettare un set di campi-->
+    Anagrafica</legend>
+    <label for="username"><!--etichetta: descrive i campi e serve a migliorare l'accessibilità-->
+    Nome Utente:
+    </label>
+    <input type="text" name="username" id="username"><!--gli attributi sono necessari per far capire come questi dati devono essere passati-->
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <label for="email">email:</label>
+    <input type="email" id="email" name="email">
+    <br>
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data">
+    <br>
+    <lable for="anni">Età</lable>
+    <input type="number" id="anni" name="anni" min="0" max="99">
+    <br>
+    <label for="orario">Orario:</label>
+    <input type="time" id="orario" name="orario">
+    <br>
+    <label for="CV">Carica il curriculum</label>
+    <input type="file" id="cv" name="cv">
+    <br>
+    <label for="range">Range:</label>
+    <input type="range" id="range" name="range" max="50" value="20" step="10">
+    <br>
+    <label for="nascosto">campo nascosto</label>
+    <input type="hidden" name="nascosto" id="nascosto">
+    <br>
+    <label for="autorizzo">autorizzo i miei dati personali</label>
+    <input type="checkbox" id="autorizzo" name="autorizzo" checked>
+    <br>
+    <label for="corso">corso</label>
+    <input type="text" placeholder="Epicode"><!--placeholder testo segnaposto-->
+    <br>
+    <label for="utente">Utente:</label>
+    <input type="text" required><!--required campo obbligatorio-->
+    <br>
+    <label for="premium">Premium</label>
+    <input type="text" disabled>
+    <br>
+    <label for="punteggio">Punteggio</label>
+    <input type="text" readonly value="99">
+</fieldset>
+<fieldset>
+    <legend>Info Ulteriori</legend>
+    <textarea name="commento" id="commento" placeholder="commento" rows="5" cols="30"></textarea>
+    <br>
+    <label for="provincia">Scegli la provincia</label>
+    <select name="provincia" id="provincia">
+    <optgroup label="lombardia">
+        <option value="MI">Milano</option><!--value serve a descrivere cosa verrà immagazzinato come dato-->
+        <option value="VA">Varese</option><!--option è l'opzione che viene renderizzata dal browser-->
+        <option value="CO">Como</option>
+    </optgroup>
+    <optgroup label="Emilia Romagna">
+        <option value="RE">Reggio Emilia</option>
+        <option value="BO">Bologna</option>
+    </optgroup>
+    </select>
+    <br>
+    <!--scelte multiple-->
+    <label for="domanda1">domanda1</label>
+    <input type="radio" name="domanda1" value="0">html è facile
+    <input type="radio" name="domanda1" value="0">css anche
+    <input type="radio" name="domanda1" value="1">JavaScript no
+    <br>
+    <button type="submit">Invia il form</button>
+    <button type="reset">Cancella i dati inseriti</button>
+    <button type="button">bottone fake, salame</button>
+    <input type="reset" value="cancella tutto">
+    <input type="submit" value="Invia i dati">
+    <input type="button" value="bottone fake, salame"><!--per creare un bottone questi due metodi sono alternativi al momento-->
+    
+</fieldset>
+    </form>
+</body>
+</html>

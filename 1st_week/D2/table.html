@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table> <!--tag parent della tabella-->
+<caption>Presenze classe full stack 0623B</caption><!--intestazione della mia tabella-->
+<tr><!--table row, sempre figlio di table, riga della tabella-->
+<th>Nome</th><!--table head, primissima riga in alto della tabella-->
+<th>Data</th>
+<th>Presente</th>
+</tr>
+<tr>
+<td>Alessandro</td><!--table data, tutti i dati dalla seconda riga in poi-->
+<td>24-10</td>
+<td>Sì</td>
+</tr>
+<tr>
+<td>Alessio</td>
+<td>24-10</td>
+<td>Sì</td>
+</tr>
+<tr>
+    <td colspan="3">Totale 44 presenti</td><!--colspan unisce le celle in orizzontale, unisce le colonne-->
+</tr>                                       <!--rowspan invece unisce in verticale le celle, unisce le righe-->
+    </table>
+    <!--per le tabelle molto grandi inseriamo una serie di altri tag-->
+    <table>
+    <thead>
+        <tr>
+            <th>Competenze</th>
+            <th>Livello</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Html</td>
+            <td>In grande crescita</td>
+        </tr>        
+        <tr>
+            <td>Css</td>
+            <td>Buono</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Così Così</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Livello medio: Buono</td>
+        </tr>
+    </tfoot>
+    </table>
+    <!--annidare tabelle-->
+    <table>
+<tr>
+    <th>Studente</th>
+    <th>Presenza</th>
+</tr>
+<tr>
+    <td>Alice</td>
+    <td>Sì</td>
+</tr>
+<tr>
+    <td>Alvise</td>
+    <td>
+        <table><!--table può essere parent oppure child di td-->
+            <tr>
+                <td>dalle 9 alle 10 sì</td>
+                <td>dalle 5 alle 6 sì</td>
+                <td>dalle 11 alle 12 no</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            nel tal head metto le info ausiliarie (titolo della pagina, descrizione del contenuto della pagina)
+        -->
+        <title>La mia prima pagina web</title>
+        <meta charset="utf-8"> <!-- qui definisco il set di caratteri (latini in questo caso)-->
+        <!-- non esiste </meta> in quanto è un tag empty-->
+        <meta name="description" content="Qui andrebbe la descrizione della mia pagina">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--questa è una dicitura che serve per siti responsive. Il sito verrà visualizzato a seconda della larghezza del device che usa il client-->
+    </head>
+    <body>
+        <!--
+            commento che non viene renderizzato
+            nel body metto tutti gli elementi che verranno parsati dal browser. Parsato = mostrato a video, renderizzato
+        -->
+        <h1>Titolo principale</h1>
+        <!--h sta per heading, intestazione-->
+        <h2>a</h2>
+        <h3>b</h3>
+        <h4>c</h4>
+        <h5>d</h5>
+        <h6>e</h6>
+        <!--gli h sono elementi di blocco, occupano tutto lo spazio orizzontale, quindi si posizioneranno uno sotto l'altro-->
+        <p>Anche il tag p che serve a formattare i paragrafi, è un tag di blocco</p>
+        <p>Infatti se metto un paragrafo nuovo questo andrà sotto l'altro già esistente</p>
+        <!--liste o elenchi puntati: esistono sia quelle ordinate che quelle non ordinate-->
+        <ol type="A"> <!--ordered list, lista ordinata-->
+            <li>Primo elemento</li>
+            <li>Secondo elemento</li> <!--list item, elementi di lista-->
+            <li>Terzo elemento</li>
+        </ol>
+        <ul type="square">
+            <li>Scrivere il codice in Visual Code
+                <ul>
+                    <li>aggiungo i nuovi tag</li>
+                    <li>metto i commenti per ricordarmeli meglio</li> <!--sistema di annidamento-->
+                    <li> memorizzo, imparo e controllo il codice</li>
+                </ul>
+            </li>
+            <li>Salvare il file</li>
+            <li>Ricaricare il browser e verificare gli aggiornamenti</li>
+        </ul>
+        <dl> <!--description list-->
+            <dt>HTML</dt> <!--description term-->
+            <dd>Linguaggio di marcatura semantica</dd> <!--description data-->
+            <dt>Css</dt>
+            <dd>linguaggio di formattazione</dd>
+            <dt>Browser</dt>
+            <dd>programma per la navigazione internet</dd>
+        </dl>
+        <address>tag semantico: ci dice che in questa porzione di contenuto ci sono info anagrafiche</address>
+        <blockquote cite="https://www.wikipedia.org">tag che racchiude una citazione con relativo riferimento</blockquote>
+        
+        <!--caratteri speciali-->
+        <p>3 è &lt; di 4</p> <!--&lt; in questo caso è il corrispettivo del simbolo minore in HTML in quanto < non può essere utilizzato perché per il programma ha valore semantico-->
+        <p>4 è &gt; di 3</p>
+        <p>HTML &amp; CSS</p>
+        <p>&quot; questo è il doppio apice</p>
+        <p>&apos; questo è l'apice singolo</p>
+        <p>&euro; euro &copy; copyright &reg; trademark &nbsp; spazio bianco</p> <!--altri caratteri speciali comuni-->
+
+        <!--elementi di blocco vanno automaticamente a capo-->
+        <!--elementi inline automaticamente si dispongono uno accanto all'altro-->
+        <span>inserisco un testo in linea</span>
+        <span>inserisco un altro testo</span>
+        <p>in questo bel paragrafo metto <b> quattro parole in grassetto</b> a scopo estetico.
+            Esiste anche un <strong>altro modo</strong> di fare i grassetti.<br><!--manda a capo, un altro tag empty-->
+            inoltre possiamo mettere una <i>parola</i> in corsivo a fini estetici e una <em>parola</em> come contenuto importante<br>
+        </p> <!--una parola contenuta dentro strong è grassettata non solo a fini estetici, ma per sottolinearne l'importanza anche per il motore di ricerca-->
+        <p>Questo è un paragrafo inserito in tag <abbr title="hyper text markup language">html</abbr>
+        grazie al tag <code><&lt;p<&gt;</code>. Posso evidenziare contenuti anche grazie al tag <mark>mark</mark>.<br>
+        Posso inserire delle citazioni anche grazie al tag q <q>Qui va la mia citazione, q sta per quotation</q><br>
+        un altro modo per inserire delle citazioni è con il tag <cite>inserisco la citazione</cite>
+        <!--blockquote citazione ma elemento di blocco, cite elemento inline-->
+    </p>
+    <!--ulteriori tag di formattazione-->
+    <p>questo è un <pre>testo non formattato</pre>. Posso indicare dei tasti della tastiera <kbd>premere Ctrl</kbd>
+    oppure degli output <samp>F5 per aggiornare</samp></p>
+    <hr><!--horizontal row è una riga orizzontale, altro tag empty-->
+    <p>Quando parleremo di JS impareremo a usare le variabili<var>variabili</var><br>
+    se dovessimo fare dei testi matematici possiamo inserire degli <sup>apici</sup> o dei <sub>pendici</sub></p>
+
+    <!-------------------++++++++++++++++++++++ inserire immagini ++++++++++++++-------------------->
+    <img src="mia_prima_immagine.webp" alt="immagine di snippet di codice" width="300"> <!--img tag empty, src è l'attributo necessario, poi si scrive il percorso relativo per arrivare a img
+                            alt -> testo alternativo 1.accessibilità 2.posizionamento
+                            width -> larghezza, perché non usarlo? 1.file alla dimensione esatta 2.responsiveness
+                        formati possibili: jpg/jpeg, png/apng, gif, svg, webp, AVIF-->
+     <img src="https://www.psicosocial.it/wp-content/uploads/2020/10/immagine-fissa-si-muove.jpg" alt="psicosocial.it">
+     <!--tag semantici per immagini-->
+     <figure>
+        <img src="img/mia_prima_immagine.webp" alt="Porzione di codice html">
+        <figcaption> Didascalia: Foto di una porzione html dal sito Epicode
+        </figcaption>
+     </figure>                       
+    </body>
+</html>
