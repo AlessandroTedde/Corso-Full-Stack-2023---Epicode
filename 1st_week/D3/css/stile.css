@@ -1,0 +1,13 @@
+/*commento css*/
+/*sintassi --> selettore {proprietà:valore} */
+* {font-style: italic;}/*selettore universale*/
+p {font-size: 20px;}/*selettore base*/
+ul, ol {margin-left: 30px;}/*con la virgola raggruppo i selettori*/
+p strong {font-size: 22px;}/*selettore discendente: non tutti i tag strong ma solo quelli contenuti in un tag p*/
+#titolo_principale{color: aquamarine;
+                   line-height: 40px;
+                   font-size: 32px;
+                }
+.autore {color: gray;}
+.corsivo {font-style: italic;}
+.maiuscolo {text-transform: uppercase;}
