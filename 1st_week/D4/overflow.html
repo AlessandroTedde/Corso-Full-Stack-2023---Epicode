@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+/*overflow*/
+        div.ex1, div.ex2, div.ex3, div.ex4{background-color: aquamarine; height: 110px; width: 110px;}
+        div.ex1 {overflow: scroll;}/* aggiunge la scrollbar. La scrollbar sarà inclusa in questi 110 x 110px*/
+        div.ex2 {overflow: hidden;}/*nasconde tutto ciò che resta al di fuori del contenitore div*/
+        div.ex3 {overflow: auto;}/*aggiunge la scroll solo se necessario*/
+        div.ex4 {overflow: visible;}/*il testo che eccede è visibile (default)*/
+        /*word-break*/
+        p {width: 120px; border: 1px solid black;}
+        .uno{word-break: normal;}/*la parola eccede il contenitore*/
+        .due {word-break: keep-all;}/*va a capo solo con i trattini*/
+        .tre {word-break: break-all;}/*vado a capo sempre*/
+        /*word-wrap
+        word-wrap normal -> (default) non spezza la parola che eccede
+        word-wrap: break-word -> spezza la parola che eccede*/
+    </style>
+</head>
+<body>
+    <h1>Proprietà overflow</h1>
+    <h2>overflow: scroll</h2>
+    <div class="ex1"> lorem ipsum kek ses sas sus sis cosa asosa sooos abahabaha abahanaman banahan hahuagaa lalalala fafafaa jajaja uauauaaua</div>
+    <h2>overflow: hidden</h2>
+    <div class="ex2"> lorem ipsum kek ses sas sus sis cosa asosa sooos abahabaha abahanaman banahan hahuagaa lalalala fafafaa jajaja uauauaaua</div>
+    <h2>overflow: auto</h2>
+    <div class="ex3"> lorem ipsum kek ses sas sus sis cosa asosa sooos abahabaha abahanaman banahan hahuagaa lalalala fafafaa jajaja uauauaaua</div>
+    <h2>overflow: visible</h2>
+    <div class="ex4"> lorem ipsum kek ses sas sus sis cosa asosa sooos abahabaha abahanaman banahan hahuagaa lalalala fafafaa jajaja uauauaaua</div>
+    <br><br><br><br><br>
+    <h1>Word-break</h1>
+    <p class="uno">Precipitevolissimevolmente è la parola più lunga del lessico italiano</p>
+    <p class="due">Precipitevolissime-volmente è la parola più lunga del lessico-italiano</p>
+    <p class="tre">Precipitevolissimevolmente è la parola più lunga del lessico italiano</p>
+
+</body>
+</html>

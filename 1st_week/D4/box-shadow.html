@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-shadow</title>
+    <style>
+        #esempio1, #esempio2, #esempio3 {width: 300px; margin: 30px; padding: 10px; border: 1px solid #000;}
+        #esempio1 {box-shadow: 5px 10px;} 
+        #esempio2 {box-shadow: 5px 20px 10px #f00;} /*terzo valore sfocatura, quarto colore*/
+        /*primo valore x -> positivo va a destra, negativo va a sinistra*/
+        /*secondo valore y -> positivo va in basso, negativo in alto*/
+        #esempio3 {background-image: url(/Img/Stintino.jpeg); /*background-repeat: repeat/no repeat, l'immagine si ripete/non si ripete all'interno del contenitore*/
+        background-size: cover;}
+        /*per gestire l'immagine di sfondo rispetto al contenitore -> background-size
+        background-size: contain/cover (fare resize e occupare tutto il contenitore
+        l'immagine di sfondo si adatta alla dimeensione del div (se il div è alto zero non la vedo)*/
+
+        /*++++++++++opacità+++++++++++++*/
+        img {width: 300px; opacity: 0.5;} /*opacity valori da 0 a 1, 0 è trasparente, 1 l'immagine piena. I decimali col punto*/
+        img:hover {opacity: 1;}
+        .first, .second, .third, .fourth {background-color: green; padding: 10px; margin: 0; width: 300px;}
+        div.first {opacity: 0.3;}
+        div.second {opacity: 0.6;}
+        div.third {opacity: 0.8;}
+        /*opacity 1 è il valore di default, quindi si può non scrivere*/
+        /*opacity cambia sia il back che il foregroung, e se voglio cambiare solo lo sfondo?
+        background:rgba (76, 175, 80, 0.3) -> tre valori rgb e il quarto come alpha -> gestisco l'opacità solo dello sfondo*/
+    </style>
+</head>
+<body>
+    <h2>Proprietà box shadow</h2>
+    <div id="esempio1"> 
+        Un div con l'ombra, il primo valore rappresenta lo scostamento orizzontale, il secondo valore quello verticale.</div>
+    <div id="esempio2">
+        Un div con l'ombra colorata (quarto valore) e una sfocatura (terzo valore) (oltre chiaramente allo scostamento orizzontale e verticale)
+    </div>  
+    <h2>Background-image</h2>
+    <div id="esempio3">Questo è un div con lo sfondo, ma se non metto contenuto la sua altezza è 0! Lorem Ipsum amor mamma mia pizzeria rondo da sosa alfabeto maronna saaaaasss</div>
+    
+    <!--opacità-->
+    <img src="/Img/Stintino2.jpeg" alt="mare">
+    <div class="first">molta opacità</div>
+    <div class="second">media opacità</div>
+    <div class="third">poca opacità</div>
+    <div class="fourth">nessuna opacità</div>
+</body>
+</html>

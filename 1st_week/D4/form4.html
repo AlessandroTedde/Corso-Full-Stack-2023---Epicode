@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label {display: block;}
+        input[type=text]:disabled {background-color: grey;}
+        input[type=text]:enabled {background-color: aqua;}/*enabled è il valore di default*/
+        input:checked {margin-left: 50px;}
+        input:in-range {border: 2px solid green;}
+        input:out-of-range {border: 2px solid red;}
+        input:required {border: 3px solid #f00;}
+        input[type=email]:valid {background-color: darkgreen; border: 1px solid green;}
+        input[type=email]:invalid {background-color: darkred; border: 1px solid red;}
+    </style>
+</head>
+<body>
+    <form action="#" method="#">
+        <label>Nome</label>
+        <input type="text" placeholder="Nome"><br>
+        <label>Cognome</label>
+        <input type="text" placeholder="Cognome"><br>
+        <label>Punteggio</label>
+        <input type="text" disabled placeholder="99"><br>
+        <label>Privacy</label>
+        <input type="checkbox" name="checkbox" checked> Ho letto la normativa privacy<br>
+        <label>Età</label>
+        <input type="radio" value="20-30" name="eta">Ho tra 20 e 30 anni<br>
+        <input type="radio" value="31-40" name="eta">Ho tra 31 e 40 anni<br>
+        <input type="radio" value="41-50" name="eta">Ho tra 41 e 50 anni<br>
+        <hr>
+        <input type="number" min="18" max="40" value="20">
+        <input type="text" required> <!--campo obbligatorio-->
+        <input type="submit">
+        <input type="email" value="support@epicode.it">
+        <!--se uso type="email" posso verificare che sia valid/invalid
+        type="email" controlla che ci sia scritto qualcosa@qualcosa-->
+        <input type="submit">
+
+    </form>
+</body>
+</html>
