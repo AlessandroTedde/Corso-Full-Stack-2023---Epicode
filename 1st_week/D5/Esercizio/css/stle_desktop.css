@@ -1,0 +1,166 @@
+/*header*/
+header {
+    background: black;
+    text-align: left;
+    padding: 1em 1em;
+}
+
+/*body*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.65;
+    margin-left: auto;
+    margin-right: auto;
+}
+*{box-sizing: border-box;}
+
+/*div testa*/
+#testa {
+    background-image: url(/1st_week/D5/Esercizio/images/banner.jpg);
+    text-align: center;
+    background-position: center center;
+    padding: 3em 5em;
+}
+#testa h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #25a2c3;
+    line-height: 1.0;
+    font-size: 2.4rem;
+    padding: 2em 2em 0.6em 2em;
+}
+#testa p {
+    padding: 0em 2.5em;
+    margin-bottom: 1em;
+}
+#testa button {
+    padding: 0.8em 2em;
+    margin-bottom: 6em;
+    background-color: #f04c2f;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*div centro*/
+#centro {
+    padding: 3em 1em 1em;
+}
+#centro picture img{
+    float: left;
+    width: 366px;
+    height: 390px;
+    padding: 1em 0em; 
+    border-radius: 400em;
+
+}
+#centro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    color: #25a2c3;
+    line-height: 1.0;
+    font-size: 1.8rem;
+    padding: 0.5em 1em 0.8em 1em; 
+    margin-left: 30%;
+}
+#centro p {
+    margin-bottom: 1em;
+    text-align: left;
+    margin-left: 32.4%;
+    padding-right: 16em;
+}
+
+/*div garanzie*/
+#garanzie {
+    background-color: #e22d0e;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 3em;
+}
+#garanzie h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.0;
+    font-size: 2.4rem;
+    padding: 1.5em 0em 0.6em 0em;
+}
+#garanzie p {
+    padding: 0 1em;
+    margin-bottom: 1.5em;
+}
+#garanzie h1 + p {
+    font-size: 1rem;
+}
+#garanzie p + p {
+    font-style: normal;
+    margin-bottom: 0;
+}
+#garanzie p:last-child {
+    padding-bottom: 4em;
+    font-size: 0.8rem;
+}
+
+/*div foto_articolo*/
+#foto_articolo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #25a2c3;
+    line-height: 1.0;
+    font-size: 1.4rem;
+    padding: 0.5em 1em 0.8em 1em; 
+}
+#foto_articolo p {
+    font-size: 1.2rem;
+    margin-bottom: 2em;
+}
+
+/*section*/
+.pc, .impara, .lavora {
+    margin: 0 35%;
+    border: 2px solid #dee1e3;
+    margin-bottom: 2em;
+}
+.pc {
+margin-right: 70%;
+margin-left: 2em;
+}
+
+
+/*footer*/
+footer {
+    background-color: #25a2c3;
+    color: #fff;
+    margin-top: 3em;
+    margin-bottom: 0;
+}
+footer h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.0;
+    font-size: 2.4rem;
+    margin-bottom: 1em;
+    margin-top: 1.5em;
+    padding-top: 2em;   
+}
+footer a {
+    font-size: 0.8em;
+}
+footer p {
+    line-height: 1.2;
+}
+footer address {
+    font-size: 0.8em;
+}
+footer br {
+    display: block;
+    border: solid 3px #fff;
+}
+footer p:last-child {
+    font-size: 0.7em;
+}
