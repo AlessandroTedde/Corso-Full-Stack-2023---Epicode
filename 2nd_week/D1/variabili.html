@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili</title>
+</head>
+<body>
+    <h2>le variabili</h2>
+    <p>servono per memorizzare dei valori</p>
+    <p>ogni variabile sara identificata da un nome che segue alcune regole:</p>
+    <ul>
+        <li>niente spazi, niente trattini - e niente caratteri speciali(?, . ecc.)</li>
+        <li>deve per forza iniziare con una lettera oppure con $ o _</li>
+        <li>sono case-sensitive</li>
+        <li>non puo iniziare con un numero</li>
+        <li>non deve mai coincidere con le keyword di Javascript (if, else, switch, return, false)</li>
+    </ul>
+    <script>
+        //esempi sulle regole di naming delle variabili
+        //keyword per memorizzare dei valori -> var, let, const
+        /*
+        var DeAmbrosis -> ok -> camel case, sostituisco quello che sarebbe lo spazio bianco con la maiuscola sulla seconda parola
+        var De_Ambrosis -> ok
+        var De Ambrosis -> no
+        var deAmbrosis -> ok
+        var Deambrosis -> ok
+        var 1deambrosis -> no
+        var De-Ambrosis -> no
+        var Deambrosis1 -> ok
+        */
+    </script>
+    <h3>dichiarazione implicita delle variabili</h3>
+    <p>non e obbligatorio dichiarare le variabili, cioe fare un'operazione esplicita di creazione<br>
+    quando c'e l'identificatore = l'engine crea implicitamente la variabile se non esiste gia</p>
+    <script>
+        var miaVaribile;
+        // dichiaro una variabile (possiamo assegnarle anche un valore contestualmente)
+        // quando dichiaro una variabile stabilisco anche scope
+        // scope e l'ambito di accessibilita della variabile (in che punto del codice posso usare i valori che sono memorizzati nella variabile)
+        variabile = 3; // questa pratica puo favorire errori e ambiguita
+        // una variabile non dichiarata si crea al primo utilizzo ed e accessibile ovunque nello script
+        // sconsigliato: quando il codice divnta complesso puo succedere di usare in punti diversi variabili con lo stesso nome
+        // -> genera comportamenti imprevisti -> dichiariamo sempre una variabile con la sua keyword
+    </script>
+<h3>strict mode</h3>
+<p>e un'opzione di controllo del codice, EcmaScript 5 -> se viene eseguito lo strict mode javascript viene eseguito osservando delle regole di scrittura piu strette 
+    -> es. ci arriva un codice di errore quando non dichiariamo le variabili.
+    Nell'esecuzione normale javascript ci da' delle regole piu' permissive che se dichiariamo lo strict mode ci obbligano a uno stile di prorammazione piu' strutturato
+</p>
+<script>
+    "use strict" // dicitura per abilitare lo script mode
+</script>
+</body>
+</html>

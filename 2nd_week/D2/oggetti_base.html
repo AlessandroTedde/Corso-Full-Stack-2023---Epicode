@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti Base</title>
+</head>
+<body>
+    <h2>Gli oggetti</h2>
+    <ul>
+        <li>tutto cio` che non e` un dato primitivo e` un oggetto</li>
+        <li>contenitori di valori eterogenei</li>
+        <li>normalmente un oggetto e` usato per rappresentare una specifica entita` (persona, prodotto, canzone, prenotazione)</li>
+        <li>un oggetto possiede
+            <ul>
+                <li>dati, detti <b>proprieta`</b> rappresentati da coppie nome-valore</li>
+                <li>funzionalita` detti <b>metodi</b> rappresentate da delle funzioni</li>
+            </ul>
+        </li>
+        <li>per creare un oggetto usiamo la <b>rappresentazione letterale</b>: definiamo un oggetto a partire dal contenuto</li>
+    </ul>
+    <script>
+        var oggettoVuoto = {} // definisce un oggetto vuoto // questa volta mi preparo ad avere un tipo di dato complesso
+        var persona = {nome: 'Federico', cognome: 'De Ambrosis', eta: '42'}; // coppie nome valore
+        // sui nomi non abbiamo le restrizioni delle variabili, ma se usiamo i caratteri speciali dobbiamo usare i doppi apici ""
+        var persona2 = {"primo-nome": "Federico", "cognome": "De Ambrosis", "eta": 42};
+        // una proprieta` puo` assumere qualsiasi valore (stringa, booleani, numeri, null), compreso un altro oggetto
+        var persona3 = {
+            nome: 'Federico', 
+            cognome: 'De Ambrosis',
+            indirizzo: {
+                via: 'Pippo',
+                numero: 1,
+                cap: 100123,
+                citta: 'Milano',
+            }
+        }
+
+        // accedere a una proprieta` dell'oggetto -> dot notation
+        var nome = persona.nome; // accedo alla proprieta` nome dell'oggetto persona
+        // dot notation e` la modalita` standard per accedere a una proprieta` di un oggetto 
+        var nome = persona["nome"]; // square brackets notation, la uso solo se non posso usare dot notation, ad esempio se il valore contiene caratteri speciali
+        var indirizzo = persona.indirizzo // se accedo a una proprieta` che non e` definita -> undefined
+        persona3.eta = 27; // definizione incrementale: serve ad aggiungere delle proprieta` ad un oggetto
+        // creando una proprieta` dentro a un oggetto e gli assegno un valore
+        // gli oggetti sono dinamici, la struttura degli oggetti e` flessibile e puo` essere modificata durante l'esecuzione dello script
+
+        var persona = {} // parto da un oggetto vuoto 
+        persona.nome = "Federico"; // dati cioe` proprieta` : coppie nome:valore separate da una ,
+        persona.cognome = "De Ambrosis";
+        persona.eta = 42
+        persona.indirizzo = {
+            via:"Pippo",
+            numero:1
+        }
+
+        // eliminare una proprieta`
+        delete persona.eta;
+    </script>
+</body>
+</html>

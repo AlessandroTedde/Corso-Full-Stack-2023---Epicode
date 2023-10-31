@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>tipi di dati</h2>
+    <p>js prevede cinque tipi di dati <strong>primitivi</strong>: numeri, stringhe, booleani, null e undefined
+    e un tipo di dato <strong>complesso</strong>: gli oggetti</p>
+    <p>qualsiasi altro elemento previsto dal linguaggio (array, funzioni...) sono tipi di dati oggetto</p>
+    <p>negli oggetti possiamo inserire delle proprieta' (attributo valore) e/o metodi (funzioni)</p>
+
+    <h3>tipo di dato stringa</h3>
+    <p> e' una sequenza di caratteri delimitata da apici che possono essere doppi oppure singoli<br>
+    "questa e' una stringa" - 'questa e una stringa' -> non c'e' una regola su che limitatori usare<br>
+unica regola: il delimitatore iniziale dev'essere uguale a quello finale<br>
+"l'altro ieri" - "questa e una 'stringa'"<br>
+esiste anche la stringa vuota "" ''<br>
+per inserire caratteri speciali in una stringa li devo far precedere da \
+"ieri c'era il sole.\nOggi piove" -> inserisce il ritorno a capo (new row)<br>
+'l\'altro ieri' - "questa e una \"stringa"\" -> il delimitatore preceduto da \ si considera come normale</p>
+
+<h3>tipo di dato numerico</h3>
+<p>senza apici. Esiste un solo tipo di dato numerico per tutto (interi, decimali, negativi)</p>
+<script>
+    var interoPositivo = 123; // niente apici, ne' doppi ne' singoli
+    var zero = 0
+    var interoNegativo = -123; // intero negativo
+    var numeroDecimale = 0.234; // il punto fa da separatore per la parte decimale
+    var altroDecimale = -12.34; // decimale negativo
+    //NaN not a number -> e' un valore speciale di js che indica che un valore numerico non e' definito
+</script>
+<p>javascript e' un linguaggio a tipizzazione debole, non c'e' controllo sul tipo di dato</p>
+
+<h3>tipo di dato booleano</h3>
+<p>ha solo due valori possibili: true | false</p>
+
+<h3>Tipo di dato null</h3>
+<p>prevede un solo valore possibile: null -> non rientra nei precedenti tipi di dato</p>
+<script>
+    var x = null; // null e' diverso da 0 e da stringa vuota
+</script>
+
+<h3>tipo di dato undefined</h3>
+<p>prevede un solo valore: undefined. Rappresenta un valore che non esiste. Non ha assegnato nessun valore, nemmeno null</p>
+<script>
+    var miaVariabile; // undefined
+    var miaVariabile = 1; // tipo di dato numerico
+    var miaVariabile = null; // posso riscrivere perche' la tipizzazione in js e' debole e quindi posso cambiare tipo di dato
+    var miaVariabile = 'pippo';
+    var miaVariabile = true; // ultimo -> valore assegnato
+</script>
+</body>
+</html>
