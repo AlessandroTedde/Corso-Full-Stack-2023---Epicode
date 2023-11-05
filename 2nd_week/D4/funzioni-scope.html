@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni scope</title>
+</head>
+<body>
+    <p>Fino a ECMAScript 6 avevamo var come unico modo di dichiarare una variabile, poi let e const come estensioni</p>
+    <script>
+        var x = 10; // se dichiaro con var appartenente all'oggetto global window -> e` accessibile globalmente
+    </script>
+    <p>Nelle funzioni js esiste uno scope (ambito) local che e` diverso da quello globale</p>
+    <script>
+        var x = 'fuori';            // dichiaro la variabile fuori dalla funzione
+        function faiQualcosa() {
+            var x = 'dentro';        // dichiaro la var x dentro la funzione
+            console.log(x);          // dentro
+        }
+        faiQualcosa();               // invocazione della funzione (se la dichiaro e basta una funzione non viene mai eseguita)
+        console.log(x);              // fuori
+        // js non ha problemi ad interpretare le due variabili (quella globale non viene alterata)
+
+        var x = 'fuori';
+        function faiQualcosa() {
+            x = 'dentro';           // assegno un valore senza dichiarare la keyword var
+            console.log(x);         // aggiorna il valore -> dentro
+        }
+        faiQualcosa();
+        console.log(x);              // dentro
+        // la variabile x avendo uno scope globale e` accessibile anche all'interno della funzione -> il valore viene alterato 
+        // le variabili dichiarate dentro le funzioni hanno uno scope locale e non sono accessibili dall'esterno
+        // var ha uno scope locale | globale se viene dichiarato dentro o fuori dalla funzione
+
+        // le parentesi {} racchiudono block scope, un blocco di codice a se` rispetto al codice globale
+        // -> una variabile dichiarata con var non ha block scope -> e` accessibile anche all'esterno del blocco di codice
+        // -> una variabile dichiarata con let     ha block scope -> e` accessibile solo all'interno del blocco di codice
+
+        ////// esempio
+        // . . .
+        // codice globale
+        // . . . 
+        // blocco
+        {var x = 2;}
+        // x qui e` disponibile
+        {let x = 2;}
+        // x qui non e` disponibile
+
+        ////// esempio 2
+        var i = 0;
+        if(true) {
+            var i = 1;
+        }
+        console.log(i); // 1 -> viene riscritto (e` modificabile anche se fuori dal blocco)
+
+        let i = 0;
+        if(true) {
+            var i = 1;
+        }
+        console.log(i); // 0 -> perche` la variabile i viene riassegnata solo dentro al blocco di if
+                        // l'assegnamento fatto usando let e` riferito solo al blocco di codice a cui let appartiene
+
+        ////// esempio 3
+        var x = 10; // x e` 10
+        {var x = 2;} // x e` 2
+        //           // anche qui x sarebbe 2 (non c'e` block scope, la variabile x viene sovrascritta)
+        // invece uso let
+        var x = 10;  // x e` 10
+        {let x = 2;} // x e` 2
+        //           // qui x e` 10 -> x non viene sovrascritta perche` let ha block scope
+
+        // ridichiarazione
+        // e` consentito
+        var x = 2; // x e` 2
+        var x = 3; // x e` 3
+        // e` consentito
+        let x = 2;
+        {let x = 3}       // e` consentito ridichiarare in uno scope differente 
+        {let x = 4}       // e` consentito ridichiarare in uno scope differente 
+
+        // non e` consentito 
+        var x = 2; // e` consentito 
+        let x = 3; // non e` consentito
+        {
+            var x = 4; // e` consentito
+            let x = 5; // non e` consentito
+        }
+
+        // ! non ridichiarare usando let ne' nello scope globale ne' in quello locale
+    </script>
+    <h2>Hoisting</h2>
+    <p>Comportamento in cui le funzioni (o le variabili) possono essere usate PRIMA della dichiarazione</p>
+    <p>posso fare hosting con var ma non con let</p>
+    <script>
+        myName = 'Federico' // posso usare myName anche se lo dichiaro in seguito
+        var p = document.getElementById("demo");
+        var myName;         // dichiarazione
+
+        // esempio con le funzioni
+        // migliora la leggibilita` -> apro il file e vedo che cosa fa il codice
+        resetPunteggio();
+        disegnaTabellone();
+        popolaTabellone();
+        avviaGioco();
+
+        function resetPunteggio() {
+            console.log('sto resettando il punteggio')
+        }
+        function disegnaTabellone() {
+            console.log('sto disegnando il tabellone')
+        }
+        function popolaTabellone() {
+            console.log('sto popolando il tabellone')
+        }
+        function avviaGioco() {
+            console.log('sto avviando il gioco')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orologio</title>
+    <style type="text/css">
+        input.stileOrologio {
+            text-align: center;
+            border: 1px solid #000;
+            color: #f00;
+            font: bold 11px Tahoma
+        }
+    </style>
+    <script>
+        // funzione che parte immediatamente quando carico la pagina
+        // costruttore data -> ore minuti e secondi
+        // se l'intero e` minore di 10 aggiunge lo zero
+        // scrivo l'ora dentro all'input
+        // settare un intervallo 
+        function Clock() {
+            var orologio = new Date();
+            var HH = orologio.getHours();
+            var MM = orologio.getMinutes();
+            var SS = orologio.getSeconds();
+            parseInt(MM) < 10 ? MM = "0" + MM : null; // se la parserizzazione dell'intero utilizzato per i minuti e` minore di 10 
+            // allora la variabile associata avra` valore 0 + il valore della variabile stessa
+            parseInt(SS) < 10 ? SS = "0" + SS : null;
+            document.formOrologio.textOrologio.value = HH + ":" + MM + ":" + SS;
+            window.setTimeout("Clock()", 1000);
+        }
+    </script>
+</head>
+<body onload ="Clock()">
+    <div align = 'center'>
+        <form name = 'formOrologio'>
+            <input type="text" name="textOrologio" class="stileOrologio" onfocus="this.blur()" onSelectStart="return false">
+        </form>
+    </div>
+</body>
+</html>

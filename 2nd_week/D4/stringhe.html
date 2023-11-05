@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe</title>
+</head>
+<body>
+    <p>Le stringhe hanno un oggetto corrispondente predefinito che prevede dei metodi per manipolare le stringhe</p>
+    <p><b>Metodo length </b></p>
+    <p>La lunghezza della stringa e`:</p>
+    <p id = 'demo'></p>
+    <p>metodo replace sostituisce il valore di una stringa con un altro</p>
+    <button onclick = 'myFunction()'>Prova</button>
+    <p id = 'demo2'>Vieni a visitare la Grecia!</p>
+    <p>Metodi lowercase e uppercase sostituiscono una stringa con caratteri minuscoli (lowercase) o maiuscoli (uppercase)</p>
+    <button onclick = 'myFunction2()'>Prova</button>
+    <p id = 'demo3'>converto questa scritta</p>
+    <script>
+        // metodo length, conta quanti caratteri ci sono in una stringa
+        // let text = 'Inserisco in una variabile la mia stringa';
+        // document.getElementById('demo').innerHTML = text.length;
+
+        // metodo slice -> estrae una parte di una stringa
+        let text = 'Inserisco in una variabile la mia stringa';
+        //let parte = text.slice(10, 16); // due parametri = da dove a dove  
+        //let parte = text.slice(10);     // un parametro solo = da dove sino alla fine
+        //let parte = text.slice(-7, -1)    // parte a contare da in fondo
+        // substring .substring -> unica differenza con slice e` che i valori inferiori a 0 sono = 0
+        // substr .substr -> la differenza e` che il secondo parametro dice quante lettere prendere
+        //let parte = text.substr(10, 6);
+        //document.getElementById('demo').innerHTML = parte;
+
+        // metodo replace
+        function myFunction() {
+            let text = document.getElementById('demo2').innerHTML
+            document.getElementById('demo2').innerHTML = text.replace('la Grecia', "l'Italia");
+        }
+
+        // metodi lowercase e uppercase
+        function myFunction2() {
+            let text = document.getElementById('demo3').innerHTML;
+            document.getElementById('demo3').innerHTML = text.toUpperCase();
+        }
+    </script>
+</body>
+</html>

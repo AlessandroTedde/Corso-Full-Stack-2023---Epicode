@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths</title>
+</head>
+<body>
+    <p>Math e` un oggetto statico -> posso associare a math una serie di metodi (matematici)<br>
+    i metodi matematici che vengono messi a disposizione possono essere richiamati e usati per fare calcoli matematici</p>
+    <table>
+        <tr><th colspan = '2'>Proprieta` sono delle costanti matematiche</th></tr>
+        <tr><td>Math.PI</td><td>Pi greco</td></tr>
+        <tr><td>Math.LN2</td><td>Logaritmo di 2</td></tr>
+        <tr><td>Math.SQRT2</td><td>Radice quadrata di 2</td></tr>
+        <tr><td>Math.E</td><td>costante di Eulero</td></tr>
+    </table>
+    <p>I metodi di <b><code>Math</code></b> ci permettono di rappresentare delle funzioni matematiche comuni</p>
+    <p id = 'demo'></p>
+    <script>
+        document.getElementById('demo').innerHTML = Math.max(5, 10, 15);   // restituisce il valore piu` alto
+        document.getElementById('demo').innerHTML = Math.min(5, 10, 15);   // restituisce il valore piu` basso
+        document.getElementById('demo').innerHTML = Math.pow(4, 3);        // elevo 4 alla terza
+        document.getElementById('demo').innerHTML = Math.sqrt(9);          // radice quadrata
+        document.getElementById('demo').innerHTML = Math.ceil(1.4);        // arrotonda all'intero piu` grande (per eccesso)
+        document.getElementById('demo').innerHTML = Math.floor(1.4);       // arrotonda all'intero piu` piccolo (per difetto)
+        document.getElementById('demo').innerHTML = Math.round(1.4);       // arrotonda all'intero piu` vicino
+        document.getElementById('demo').innerHTML = Math.random();         // genera un numero casuale tra 0 e 1
+        document.getElementById('demo').innerHTML = Math.floor(Math.random() * 100);
+        // combino due metodi -> arrotondo a un intero un numero casuale (tra 0 e 1) e lo moltiplico per 99
+        // seno, coseno, tangente, cotangente, logaritmi, radici
+        // Math.sin -> seno
+        // Math.cos -> coseno
+        // Math.tan -> tangente
+        // Math.abs -> restituisce il valore assoluto di un numero (senza + o - davanti)
+    </script>
+</body>
+</html>

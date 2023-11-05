@@ -1,0 +1,137 @@
+/*ho scritto le istruzioni css (ad esempio per altezza e larghezza delle immagini) prendendo come misura lo schermo del mio portatile (larghezza 1200px).
+per visualizzare la pagina su chrome, quindi, rimpicciolivo in larghezza la pagina sino ad arrivare a 1200px/*
+
+/*Istruzioni Generali*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #e9edee;
+}
+.topLogo, .bottomLogo {
+    background-color: #222f3f;
+}
+header, footer {
+    background-color: #364759;
+}
+/*Section .topLogo*/
+.topLogo {
+text-align: left;
+margin: auto;
+}
+.topLogo img {
+    padding-left: 2em;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+/*Header*/
+header {
+    text-align: left;
+}
+header ul {
+    padding: 0.5em;
+}
+header li{
+    margin-left: 1em;
+    display: inline;
+} 
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Section .giftCards*/
+.giftCards {
+    background-color: #f56600;
+    margin: 1.2em;
+}
+.giftCards p {
+    padding: 0.5em;
+}
+.giftCards a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Div id #titleBox*/
+#titleBox {
+    background-image: url(/2nd_week/D5/Esercitazione-D5/assets/images/bg-image.png);
+    background-position: center top;
+    background-size: contain;
+    margin: 0 1.2em; 
+}
+#titleBox h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    padding: 1.5em 2em 0;
+}
+#titleBox p {
+    padding: 1em 0 1.8em;
+    color: white;
+    font-weight: 600;
+}
+
+/*Div id #perfectGift*/
+#perfectGift {
+    background-color: white;
+    text-align: left;
+    margin: 1.2em;
+    padding-bottom: 1em;
+}
+#perfectGift p {
+    padding: 1em;
+    font-weight: 500;
+}
+#perfectGift a, #vr a, #audio a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #3b8189;
+    font-weight: 900;
+    margin-left: 0.8em;
+}
+#perfectGift picture {
+    margin: 1em 1em 1rem;
+}
+#perfectGift img {
+display: inline-block;
+width: 100%;
+min-height: 350px;
+max-height: 350px;
+object-fit: cover;
+object-position: bottom;
+max-width: 250px;
+border-radius: 2em;
+box-shadow: 6px 6px 6px #D7D7D9;
+}
+
+/*Div id #vr*/
+#vr {
+    margin: 0 1.2em 1.2em
+}
+#vr img, #audio img {
+    min-height: 350px;
+    max-width: 1144.63px;
+}
+
+/*Div id #audio*/
+#audio {
+    margin: 0 1.2em 1.2em
+}
+
+/*Footer*/
+footer p {
+    padding: 0.5em;
+}
+footer a {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*Section class .bottomLogo*/
+.bottomLogo img {
+    max-width: 120px;
+    max-height: 70px;
+    padding: 2.5em 0 3em
+}

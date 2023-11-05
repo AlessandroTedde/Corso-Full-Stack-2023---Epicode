@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni</title>
+</head>
+<body>
+    <h2>Funzioni</h2>
+    <p>Una funzione e` una serie di istruzioni racchiuse in un bloccodi codice. Una funzione puo` essere contraddistinta da un nome<br>
+    Una funzione puo` accettare argomenti o parametri d'ingresso, Una funzione puo` restituire dei valori.</p>
+    <p>Se una funzione ha un nome, questo nome servira` per richiamare ed eseguire la funzione stessa in qualunque punto dello script.<br>
+    Esistono delle funzioni anonime, come le funzioni freccia, che fanno eccezione.</p>
+    <p>L'utilizzo di una funzione all'interno di uno script avviene in due fasi:</p>
+    <ul>
+        <li>prima fase -> <b>definizione</b> o <b>dichiarazione</b> -> associo un nome e un blocco di codice</li>
+        <li>seconda fase -> <b>invocazione</b> o <b>chiamata</b> -> il blocco di codice viene eseguito</li>
+    </ul>
+    <p><b>Schema sintattico della funzione</b></p>
+    <script>
+        // definizione della funzione
+        function nome(argomenti) {
+            // istruzioni
+        }
+        // function e` una keyword che evidenzia che stiamo dichiarando una funzione
+        // il nome che assegno segue le stesse regole delle variabili
+        // argomenti possono essere uno o piu` di uno, in tal caso separati da virgole 
+        // -> lista di variabili che possono essere usate nel blocco delle istruzioni
+
+        // invocazione della funzione
+        nome(valori);
+        // nome e` il nome della funzione che ho assegnato in fase di definizione
+        // valori sono una o piu` espressioni (separate da virgole) che vengono assegnate agli argomenti
+    </script>
+    <p><b>return</b></p>
+    <p>return e` un'istruzione che ci permette di terminare l'esecuzione della funzione e restituire un valore</p>
+    <script>
+        function somma() {
+            var z = 11 + 5;
+            return z;
+        }
+        var risultato = somma();
+        // e` una funzione senza argomenti che somma due numeri interi. Con return restituisce il risultato
+        // quando invoco la funzione la somma viene eseguita e il risultato assegnato alla variabile risultato
+        // la funzione somma() la posso poi riusare in qualunque espressione (e` in questo caso un valore numerico!)
+        var risultato2 = 5 + somma() * 2; // 37
+    </script>
+    <h3>Argomenti o parametri</h3>
+    <p>La funzione somma -> fa solo l'addizione tra 11 e 5, se voglio scrivere una funzione somma generica usero` gli argomenti</p>
+    <script>
+        function somma(x, y) {              // dichiaro due argomenti (o parametri)
+            var z = x + y;
+            return z;
+        }
+        var risultato = somma(11, 5);       // assegno i valori ai parametri (o argomenti)
+        // parametri opzionali -> il numero dei valori puo` non corrispondere al numero degli argomenti
+        var risultatoa = somma(11);         // x=11, y=undefined -> NaN
+        var risultatob = somma();           // x e y sono undefined -> NaN
+        var risultatoc = somma(11, 5, 9, 3) // js ignora gli altri argomenti in piu` -> somma solo 11 e 5
+
+        // da ECMAScript 6 e` stata introdotta la possibilita` di specificare dei valori di default -> 
+        function somma(x = 0, y = 0) {
+            var z = x + y;
+            return z;
+        }
+
+        // return interrompe la funzione e restituisce un valore, lo possiamo inserire n volte
+        function dado(numero) {
+            switch(numero) {
+                case"uno": return 1;
+                break;
+                case"due": return 2;
+                break;
+                case"tre": return 3;
+                break;
+                case"quattro": return 4;
+                break;
+                case"cinque": return 5;
+                break;
+                case"sei": return 6;
+                break;
+                default: return NaN;
+                break;
+            }
+        }
+
+        // funzioni predefinite
+        /*
+        parseInt()       -> converte una stringa in un numero intero ("3" -> 3)
+        parseFloat()     -> converte una stringa in un numero decimale ("3.14" -> 3.14)
+        isNaN()          -> prende un argomento -> true se il valore e` NaN, altrimenti false
+
+        eval()           -> prende come argomento una stringa e lo esegue come se fosse codice js
+        */
+       var x = eval('5 + 1'); // valuta l'espressione e assegna a x valore 6
+       // pro -> potenziale enorme -> lo uso come interprete js
+       // contro -> rischio risultati incontrollabili -> eval is evil
+       // eval non e` disponibile in modalita` strict
+       // i nomi delle funzioni predefinite non sono riservati -> se uso quel nome sovrascrive il comportamento di default
+    </script>
+    <h3>funzioni a freccia</h3>
+    <p>Novita` di ECMAScript 6, modalita` alternativa (e sintetica) di scrivere le funzioni dentro js</p>
+    <p>Non serve dichiarare la keyword function</p>
+    <script>
+        function moltiplica(params) {
+            return params * 2;
+        }
+        moltiplica(4); // 8
+        // se voglio descrivere questa cosa con le arrow functions
+        var moltiplica = (params) => params * 2;
+        moltiplica(4); // 8
+        // arrow functions perche` ho simbolo freccia =>
+        // non c'e` piu` la keyword
+        // (parametro) => espressione // a sinistra della freccia il parametro, a destra della freccia l'espressione
+        // se c'e` un solo parametro posso anche togliere le parentesi tonde ()
+        var moltiplica = params => params * 2;
+        moltiplica(4); // 8
+        // se non abbiamo parametri invece meglio metterle le parentesi ()
+        // () => espressione
+        // pro -> codice piu` stringato; contro -> codice meno leggibile
+    </script>
+</body>
+</html>
