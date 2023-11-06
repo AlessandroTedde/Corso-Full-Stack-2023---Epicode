@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodi degli array 2</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const fruits = ['banana', 'arancia', 'mela', 'mango'];
+        /*METODI GIA` VISTI
+        ***length -> conta gli elementi e restituisce un valore
+        */
+       let length = fruits.length;
+       document.getElementById("demo").innerHTML = length; // stampa il numero di elementi nell'array
+       fruits.length = 2; // uso length per stampare solo fino a una posizione
+       document.getElementById("demo").innerHTML = fruits; // stampa l'array sino alla posizione 2
+
+       // *** push -> aggiunge elemento in fondo all'array
+       fruits.push('kiwi', 'limoni');
+       document.getElementById("demo").innerHTML = fruits;
+
+       // *** pop -> elimina un elemento da in fondo a un array
+       fruits.pop();             // elimina l'ultimo elemento
+       document.getElementById("demo").innerHTML = fruits; // banana, arancia, kiwi
+       //let removed = fruits.pop();
+       //document.getElementById("demo").innerHTML = fruits; // kiwi
+
+       // *** shift -> rimuove il primo item di un array
+       fruits.shift();      
+       document.getElementById("demo").innerHTML = fruits; // arancia, kiwi
+       document.getElementById("demo").innerHTML = fruits.shift(); // arancia
+
+       // *** unshift -> aggiungere nuovi item all'inizio dell'array
+       fruits.unshift('ananas', 'melograno', 'uva');
+       document.getElementById("demo").innerHTML = fruits; // ananas, melograno, uva, kiwi
+
+       // *** sort -> ordina un array
+       document.getElementById("demo").innerHTML = fruits.sort(); // ananas, kiwi, melograno, uva
+
+       // *** reverse -> ordine inverso
+       document.getElementById("demo").innerHTML = fruits.reverse(); // uva, melograno, kiwi, ananas
+
+       // *** splice -> togliere o aggiungere elementi in qualsiasi posizione
+       // due argomenti obbligatori + argomenti opzionali
+       // 1o argomento -> obbligatorio -> la posizione da cui eliminare (o aggiungere) elementi
+       // 2o argomento -> obbligatorio -> quanti elementi eliminare
+       // dal 3o argomento -> opzionali -> servono a dire eventualmente quali elementi aggiungere
+       fruits.splice (2, 2);                        // dalla posizione 2 elimino 2 item
+       document.getElementById("demo").innerHTML = fruits; // uva, melograno
+       fruits.splice (2, 0, 'noci', 'nocciole');           // dalla posizione 2 ne elimino 0 e aggiungo
+       document.getElementById("demo").innerHTML = fruits; // uva, melograno, noci, nocciole
+
+       // *** IndexOf -> cercare un elemento in un array -> restituisce la posizione
+       let index = fruits.indexOf('noci'); 
+       //let index = fruits.indexOf('noci', 1);             // cerco qualcosa a partire da una posizione
+       document.getElementById("demo").innerHTML = index; // 2
+    </script>
+</body>
+</html>

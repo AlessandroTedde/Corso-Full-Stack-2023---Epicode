@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametri rest</title>
+</head>
+<body>
+    <h2>Parametri rest</h2>
+    <p>La sintassi del <code>parametro rest</code> ci consente di accettare un numero indefinito di argomenti (es: un array)</p>
+    <script>
+        function sum(...mieiArgomenti) {
+            let total = 0;
+            for (const arg of mieiArgomenti) {
+                total += arg;
+            }
+            return total;
+        }
+        console.log(sum(1, 2, 3));          // output atteso -> 6
+        console.log(sum(1, 2, 3, 4));       // output atteso -> 10
+        console.log(sum(1, 2, 3, 4, 5));    // output atteso -> 15
+    </script>
+    <h3>for ... of</h3>
+    <p><code>for ... of</code> e` una variante di <code>for</code> che esegue un loop su dei valori che vengono da un oggetto iterabile
+    (array, stringhe, etc)</p>
+    <p>Sintassi -> dichiaro il singolo elemento della collezione</p>
+    <script>
+        const array1 = ['a', 'b', 'c', 'd'];
+        for (const element of array1) {
+            console.log(element);
+        }
+        // output: 'a', 'b', 'c', 'd'
+    </script>
+</body>
+</html>

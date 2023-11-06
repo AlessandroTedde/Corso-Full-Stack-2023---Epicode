@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe metodi nuovi</title>
+</head>
+<body>
+    <h1>Metodi delle stringhe</h1>
+    <p>Abbiamo gia` visto alcuni metodi: length (lunghezza), slice, substring, substr (tre metodi per tagliare le stringhe),
+        toUpperCase e toLowerCase (per fare stringhe maiuscole | minuscole), trim (pulire dagli spazi bianchi)
+    </p>
+    <p><b>Metodi di controllo sulle stringhe introdotti da Ecmascript6:</b> mi permettono di controllare se una stringainizia, finisce e contiene determinati caratteri.</p>
+    <h3>controllo se una stringa inizia con determinati caratteri -> metodo <code>startsWith</code></h3>
+    <script>
+        const strl = 'Saturday night plans';
+        console.log(strl.startsWith('Sat'));    // risultato atteso -> true
+        // startsWith accetta due parametri (cosa_cercare, posizione_in_cui_cercare)
+        console.log(strl.startsWith('Sat', 3)); // risultato atteso -> false perche` non e` nella posizione 3
+        // il secondo parametro dice la posizione iniziale in cui cercare, la prima lettera e` 0
+
+        const str2 = 'To be, or not to be';
+        console.log(str2.startsWith('To be'));          // true
+        console.log(str2.startsWith('not to be'));      // false
+        console.log(str2.startsWith('not to be', 10));  // true
+    </script>
+    <h3>controllo se una stringa finisce con determinati caratteri -> metodo <code>endsWith</code></h3>
+    <script>
+        const str3 = 'Rugby is best!';
+        console.log(str3.endsWith('best!'));         // true
+        console.log(str3.endsWith('best!', 9));      // true
+        console.log(str3.endsWith('best'));          // false (manca il !)
+    </script>
+    <h3>Controllo se una stringa contiene una determinata parola -> metodo <code>includes</code></h3>
+    <script>
+        const sentence = 'il rugby e` lo sport piu` bello del mondo';
+        const word = 'sport';
+        console.log(
+            `La parola "${word}" ${ sentence.includes(word) ? 'e' : 'non e'} contenuta nella frase`
+            );
+            // la prima graffa {word} e` semplicemente una variabile
+            // nella seconda graffa metto un operatore ternario
+            // com'era fatto l'operatore ternario? -> condizione true|false ? se true eseguo il primo blocco : eseguo il secondo
+    </script>
+</body>
+</html>
