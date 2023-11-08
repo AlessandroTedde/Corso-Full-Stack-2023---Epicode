@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    font-size: 1vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    background-color: rgb(123, 50, 145);
+
+}
+form {
+    text-align: center;
+    background-color: white;
+    border-radius: 1vw;
+    max-width: 50vw;
+    padding: 4vw;
+    margin: 15vw 20vw;
+}
+input {
+    padding: 0.7vw 15vw 0.7vw 0.7vw;
+    border-radius: 0.5vw;
+    border-color: lightgrey;
+    text-align: left;
+}
+#addButton {
+    padding: 0.5vw 3vw;
+    border-radius: 0.5vw;
+    margin-left: 2vw;
+    background-color: aquamarine;
+}
+.linethrough {
+    text-decoration: line-through;
+}

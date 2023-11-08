@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserire elementi nel DOM</title>
+    <style>
+        #myDIV { background-color: white; padding: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Inserire elementi nel dom via JavaScript</h1>
+    <p>Creare un nuovo paragrafo p con del testo</p>
+    <div id="myDIV">
+        <p>Cose che so</p>
+        <ul id="myList1">
+            <li>Css</li>
+            <li>Html</li>
+        </ul>
+        <p>Cose che non so</p>
+        <ul id="myList2">
+            <li>javascript</li>
+            <li>react</li>
+        </ul>
+        <p>Cose che devo fare</p>
+        <ul id="myList">
+            <li>andare al bar</li>
+            <li>andare al concerto</li>
+        </ul>
+        <button onclick="myFunction()">Sposta da sotto a sopra</button>
+        <button onclick="myFunction_weekend()">Sostituisco il primo elemento della lista</button>
+        <p id="demo">Clicco sul bottone remove per rimuovere questo paragrafo dal DOM</p>
+        <button onclick='rimuovi()'>Rimuovi</button>
+    </div>
+    <script>
+
+        // create element e` l'istruzione che ci permette di creare un nuovo elemento
+        const paragrafo = document.createElement("p");          // creo un elemento, nel parametro dico che tipo di elemento e`
+        paragrafo.innerText = "Questo e` il mio nuovo paragrafo" // innerText inserisco dei testi semplici senza formattazione
+        // non e` sufficiente creare l'elemento per vederlo a video, devo anche usare un comando per inserirlo
+        // l'ho soltanto creato finora
+        document.body.appendChild(paragrafo);                   // appendChild dico di inserire il paragrafo in coda a <body>
+        
+        // creo un tag e lo inserisco in un div
+        const paragrafodue = document.createElement('p');
+        paragrafodue.innerHTML = "Questo e` un <b>paragrafo</b>"  // innerHTML inserisce dei testi con formattazione
+        document.getElementById("myDIV").appendChild(paragrafodue);
+
+        // ! con appendChild inserisco sempre il tag in fondo al contenitore
+        // posso anche creare e assegnare il contenuto separatamente
+        const btn = document.createElement("button");
+        btn.innerHTML = "Bottone ciao";
+        document.body.appendChild(btn);
+
+        // Append Child
+        function myFunction() {
+            const node = document.getElementById("myList2").lastElementChild;
+            document.getElementById("myList1").appendChild(node);
+        }
+
+        // insert before -> per inserire prima (e non in fondo come con appendChild)
+        const newNode = document.createElement("li") ;                   // creo un <li>
+        const textNode = document.createTextNode("studiare javascript"); // aggiungo un nodo di testo
+        newNode.appendChild(textNode);                                   // appendo textNode al mio <li>
+        const list = document.getElementById("myList");                  // inserisco prima di un child esistente
+        list.insertBefore(newNode, list.children[0]);                    // children perche` e` figlio di ul
+
+        // Replace Child
+        // uso replace child per sostituire un determinato valore della mia lista
+        function myFunction_weekend() {
+            // seleziono il primo elemento di una lista -> entro nella lista ul -> mi faccio dare il primo children
+            const element = document.getElementById("myList").children[0];
+            // creo un nuovo testo 
+            const sabato = document.createTextNode("vado al mare");
+            // sostituisco
+            element.replaceChild(sabato, element.childNodes[0]);
+        }
+
+        // Remove
+        // uso remove per rimuovere qualcosa dal DOM
+        function rimuovi() {
+            const miop = document.getElementById("demo");
+            miop.remove();
+        }
+        // removeChild()
+        // lastElementChild() -> esiste firstElementChild()
+    </script>
+</body>
+</html>
