@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+main {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cella {
+    display: inline-block;
+    width: 12%;
+    height: 85px;
+    position: relative;
+    border: 1px solid ;
+} 
+
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 64px;
+    font-weight: 700;
+    position: relative;
+    top: 16px;
+    z-index: 1;
+    pointer-events: none;
+}
+button {
+    padding: 4px;
+    border-radius: 8px;
+    background-color: beige;
+    color: black;
+}
+
+#tabellone div {
+    display: inline-block;
+    font-size: 20px;
+}
