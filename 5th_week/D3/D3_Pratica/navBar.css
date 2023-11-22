@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(87, 21, 21);
+}
+
+div {
+  display: flex;
+  border-radius: 70px;
+  background-color: #fbf7e3;
+  width: 37vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  border-radius: 75px;
+  border: none;
+  background-color: palegoldenrod;
+  width: 80px;
+  height: 30px;
+}
+
+div :nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+}

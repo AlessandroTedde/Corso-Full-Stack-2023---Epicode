@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(87, 21, 21);
+}
+
+.container {
+  background-color: #fbf7e3;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  border-radius: 35px;
+  align-items: center;
+  max-height: 500px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+button {
+  background-color: palegoldenrod;
+  border: none;
+  border-radius: 35px;
+  padding: 10px 40px;
+}
+
+div p {
+  margin: 0;
+}
+
+img {
+  width: 300px;
+  min-height: 200px;
+  border-radius: 35px 35px 0 0;
+}
